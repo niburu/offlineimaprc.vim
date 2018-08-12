@@ -12,7 +12,7 @@ syn match offlineimapAccount /\[\(Account\).*\]/
 syn match offlineimapRepository /\[\(Repository\).*\]/
 syn match offlineimapRepository /\[\(DEFAULT\)\]/
 
-syn match offlineimapOption /\<\(ui\|maxsyncaccounts\|accounts\|pythonfile\|fsync\|socktimeout\|status_backend\|localrepository\|remoterepository\|autorefresh\|quick\|maxconnections\|type\|localfolders\|sslcacertfile\|cert_fingerprint\|remoteusereval\|remotepasseval\|realdelete\|remotehost\|remoteport\|ssl\|folderfilter\)\>/
+syn match offlineimapOption /\<\(ui\|maxsyncaccounts\|accounts\|pythonfile\|fsync\|socktimeout\|status_backend\|localrepository\|remoterepository\|autorefresh\|quick\|maxconnections\|type\|localfolders\|sslcacertfile\|cert_fingerprint\|remoteusereval\|remotepasseval\|realdelete\|remotehost\|remoteport\|ssl\|folderfilter\|remoteuser\|nametrans\|newmail_hook\|createfolders\)\>/
 
 syn match offlineimapNumber /\<\(\d\+$\)/
 syn match offlineimapBool /\<\(true\|false\)\>/

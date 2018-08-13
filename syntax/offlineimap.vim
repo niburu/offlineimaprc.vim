@@ -6,6 +6,9 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+syntax region offlineimapString start=+"+ skip=+\\"+ end=+"+
+syntax region offlineimapString start=+'+ skip=+\\'+ end=+'+
+
 syn match offlineimapComment    /#.*$/ contains=@Spell
 syn match offlineimapGeneral    /\[\(general\)\]/
 syn match offlineimapAccount    /\[\(Account\).*\]/
@@ -74,6 +77,7 @@ highlight default link offlineimapNumber Number
 highlight default link offlineimapBool        Constant
 highlight default link offlineimapActivate    Constant
 highlight default link offlineimapWrongOption Constant
+highlight default link offlineimapString String
 
 
 let b:currEnt_syntax = "offlineimap"

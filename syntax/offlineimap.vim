@@ -12,10 +12,40 @@ syn match offlineimapAccount    /\[\(Account\).*\]/
 syn match offlineimapRepository /\[\(Repository\).*\]/
 syn match offlineimapDefault    /\[\(DEFAULT\)\]/
 
-syn match offlineimapOption /^\<\(ui\|maxsyncaccounts\|accounts\|pythonfile\|fsync\|socktimeout\|status_backend\|localrepository\|remoterepository\|autorefresh\|quick\|maxconnections\|type\|localfolders\|sslcacertfile\|cert_fingerprint\|remoteusereval\|remotepasseval\|realdelete\|remotehost\|remoteport\|ssl\|folderfilter\|remoteuser\|nametrans\|newmail_hook\|createfolders\|postsynchook\|keepalive\|holdconnectionopen\)\>/
+syntax match offlineimapOption /^\<\(accounts\)\>/
+syntax match offlineimapOption /^\<\(autorefresh\)\>/
+syntax match offlineimapOption /^\<\(cert_fingerprint\)\>/
+syntax match offlineimapOption /^\<\(createfolders\)\>/
+syntax match offlineimapOption /^\<\(folderfilter\)\>/
+syntax match offlineimapOption /^\<\(fsync\)\>/
+syntax match offlineimapOption /^\<\(holdconnectionopen\)\>/
+syntax match offlineimapOption /^\<\(keepalive\)\>/
+syntax match offlineimapOption /^\<\(localfolders\)\>/
+syntax match offlineimapOption /^\<\(localrepository\)\>/
+syntax match offlineimapOption /^\<\(maxconnections\)\>/
+syntax match offlineimapOption /^\<\(maxsyncaccounts\)\>/
+syntax match offlineimapOption /^\<\(nametrans\)\>/
+syntax match offlineimapOption /^\<\(newmail_hook\)\>/
+syntax match offlineimapOption /^\<\(postsynchook\)\>/
+syntax match offlineimapOption /^\<\(pythonfile\)\>/
+syntax match offlineimapOption /^\<\(quick\)\>/
+syntax match offlineimapOption /^\<\(realdelete\)\>/
+syntax match offlineimapOption /^\<\(remotehost\)\>/
+syntax match offlineimapOption /^\<\(remotepasseval\)\>/
+syntax match offlineimapOption /^\<\(remoteport\)\>/
+syntax match offlineimapOption /^\<\(remoterepository\)\>/
+syntax match offlineimapOption /^\<\(remoteuser\)\>/
+syntax match offlineimapOption /^\<\(remoteusereval\)\>/
+syntax match offlineimapOption /^\<\(socktimeout\)\>/
+syntax match offlineimapOption /^\<\(ssl\)\>/
+syntax match offlineimapOption /^\<\(sslcacertfile\)\>/
+syntax match offlineimapOption /^\<\(status_backend\)\>/
+syntax match offlineimapOption /^\<\(type\)\>/
+syntax match offlineimapOption /^\<\(ui\)\>/
 
-syn match offlineimapNumber /\<\(\d\+$\)/
-syn match offlineimapBool /\<\(true\|false\)\>/
+syn match offlineimapNumber   /\<\(\d\+$\)/
+syn match offlineimapBool     /\<\([Tt]rue\)\>/
+syn match offlineimapBool     /\<\([Ff]alse\)\>/
 syn match offlineimapActivate /\<\(yes\|no\)\>/
 
 " Only except certain values for specific options

@@ -6,11 +6,11 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-syn match offlineimapComment /#.*$/ contains=@Spell
-syn match offlineimapGeneral /\[\(general\)\]/
-syn match offlineimapAccount /\[\(Account\).*\]/
+syn match offlineimapComment    /#.*$/ contains=@Spell
+syn match offlineimapGeneral    /\[\(general\)\]/
+syn match offlineimapAccount    /\[\(Account\).*\]/
 syn match offlineimapRepository /\[\(Repository\).*\]/
-syn match offlineimapRepository /\[\(DEFAULT\)\]/
+syn match offlineimapDefault    /\[\(DEFAULT\)\]/
 
 syn match offlineimapOption /^\<\(ui\|maxsyncaccounts\|accounts\|pythonfile\|fsync\|socktimeout\|status_backend\|localrepository\|remoterepository\|autorefresh\|quick\|maxconnections\|type\|localfolders\|sslcacertfile\|cert_fingerprint\|remoteusereval\|remotepasseval\|realdelete\|remotehost\|remoteport\|ssl\|folderfilter\|remoteuser\|nametrans\|newmail_hook\|createfolders\|postsynchook\|keepalive\|holdconnectionopen\)\>/
 
@@ -32,6 +32,7 @@ highlight default link offlineimapComment Comment
 highlight default link offlineimapGeneral Function
 highlight default link offlineimapAccount Function
 highlight default link offlineimapRepository Function
+highlight default link offlineimapDefault Function
 highlight default link offlineimapOption Type
 highlight default link offlineimapWrongOption offlineimapOption
 highlight default link offlineimapWrongOptionValue Error

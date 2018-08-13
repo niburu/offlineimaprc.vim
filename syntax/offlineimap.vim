@@ -53,7 +53,12 @@ syn match offlineimapWrongOption /\<\(maxsyncaccounts\|socktimeout\|autorefresh\
 syn match offlineimapWrongOption /\<fsync\s=\s\(true$\|false$\)\@!.*$/
 syn match offlineimapWrongOption /\<\(realdelete\|ssl\)\s=\s\(yes$\|no$\)\@!.*$/
 syn match offlineimapWrongOption /\<status_backend\s=\s\(plain$\|sqlite$\)\@!.*$/
-syn match offlineimapWrongOption /\<type\s=\s\(Maildir$\|Gmail$\|IMAP$\)\@!.*$/
+
+" Types
+syntax match offlineimapWrongOption /\<Maildir\>\s*$/
+syntax match offlineimapWrongOption /\<Gmail\>\s*$/
+syntax match offlineimapWrongOption /\<IMAP\>\s*$/
+
 syn match offlineimapWrongOption /\<ui\s=\s\(TTY.TTYUI$\|basic$\|blinkenlights$\|quiet\)\@!.*$/
 
 syn match offlineimapWrongOptionValue /\S* \zs.*$/ contained containedin=offlineimapWrongOption
@@ -64,11 +69,11 @@ highlight default link offlineimapAccount Function
 highlight default link offlineimapRepository Function
 highlight default link offlineimapDefault Function
 highlight default link offlineimapOption Type
-highlight default link offlineimapWrongOption offlineimapOption
 highlight default link offlineimapWrongOptionValue Error
 highlight default link offlineimapNumber Number
-highlight default link offlineimapBool Constant
-highlight default link offlineimapActivate Constant
+highlight default link offlineimapBool        Constant
+highlight default link offlineimapActivate    Constant
+highlight default link offlineimapWrongOption Constant
 
 
 let b:currEnt_syntax = "offlineimap"

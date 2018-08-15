@@ -46,16 +46,19 @@ syntax match offlineimapOption /^\<\(status_backend\)\>/
 syntax match offlineimapOption /^\<\(type\)\>/
 syntax match offlineimapOption /^\<\(ui\)\>/
 
-syn match offlineimapNumber   /\<\(\d\+$\)/
+" Match '0.', '0.0', and '.0'
+set iskeyword+=.
+syntax match offlineimapNumber /\<\d\+\.*\d*\>\|\<\.\d\+\>/
+
 syn match offlineimapBool     /\<\([Tt]rue\)\>/
 syn match offlineimapBool     /\<\([Ff]alse\)\>/
 syn match offlineimapActivate /\<\(yes\|no\)\>/
 
-" Only except certain values for specific options
-syn match offlineimapWrongOption /\<\(maxsyncaccounts\|socktimeout\|autorefresh\|quick\|maxconnections\|remoteport\)\s=\s\(\d\+$\)\@!.*$/
-syn match offlineimapWrongOption /\<fsync\s=\s\(true$\|false$\)\@!.*$/
-syn match offlineimapWrongOption /\<\(realdelete\|ssl\)\s=\s\(yes$\|no$\)\@!.*$/
-syn match offlineimapWrongOption /\<status_backend\s=\s\(plain$\|sqlite$\)\@!.*$/
+"" Only except certain values for specific options
+"syn match offlineimapWrongOption /\<\(maxsyncaccounts\|socktimeout\|autorefresh\|quick\|maxconnections\|remoteport\)\s=\s\(\d\+$\)\@!.*$/
+"syn match offlineimapWrongOption /\<fsync\s=\s\(true$\|false$\)\@!.*$/
+"syn match offlineimapWrongOption /\<\(realdelete\|ssl\)\s=\s\(yes$\|no$\)\@!.*$/
+"syn match offlineimapWrongOption /\<status_backend\s=\s\(plain$\|sqlite$\)\@!.*$/
 
 " Types
 syntax match offlineimapWrongOption /\<Maildir\>\s*$/
@@ -72,7 +75,7 @@ syntax match offlineimapUI /\<[Ss]yslog\>/
 
 "syn match offlineimapWrongOption /\<ui\s=\s\(TTY.TTYUI$\|basic$\|blinkenlights$\|quiet\)\@!.*$/
 
-syn match offlineimapWrongOptionValue /\S* \zs.*$/ contained containedin=offlineimapWrongOption
+"syn match offlineimapWrongOptionValue /\S* \zs.*$/ contained containedin=offlineimapWrongOption
 
 highlight default link offlineimapComment Comment
 highlight default link offlineimapGeneral Function
@@ -80,13 +83,12 @@ highlight default link offlineimapAccount Function
 highlight default link offlineimapRepository Function
 highlight default link offlineimapDefault Function
 highlight default link offlineimapOption Type
-highlight default link offlineimapWrongOptionValue Error
+"highlight default link offlineimapWrongOptionValue Error
 highlight default link offlineimapNumber Number
 highlight default link offlineimapBool        Constant
 highlight default link offlineimapActivate    Constant
 highlight default link offlineimapWrongOption Constant
 highlight default link offlineimapUI          Constant
 highlight default link offlineimapString String
-
 
 let b:currEnt_syntax = "offlineimap"

@@ -62,7 +62,15 @@ syntax match offlineimapWrongOption /\<Maildir\>\s*$/
 syntax match offlineimapWrongOption /\<Gmail\>\s*$/
 syntax match offlineimapWrongOption /\<IMAP\>\s*$/
 
-syn match offlineimapWrongOption /\<ui\s=\s\(TTY.TTYUI$\|basic$\|blinkenlights$\|quiet\)\@!.*$/
+" UIs
+syntax match offlineimapUI /\<MachineUI\>/
+syntax match offlineimapUI /\<TTYUI\>/
+syntax match offlineimapUI /\<[Bb]asic\>/
+syntax match offlineimapUI /\<[Bb]linkenlights\>/
+syntax match offlineimapUI /\<[Qb]uiet\>/
+syntax match offlineimapUI /\<[Ss]yslog\>/
+
+"syn match offlineimapWrongOption /\<ui\s=\s\(TTY.TTYUI$\|basic$\|blinkenlights$\|quiet\)\@!.*$/
 
 syn match offlineimapWrongOptionValue /\S* \zs.*$/ contained containedin=offlineimapWrongOption
 
@@ -77,6 +85,7 @@ highlight default link offlineimapNumber Number
 highlight default link offlineimapBool        Constant
 highlight default link offlineimapActivate    Constant
 highlight default link offlineimapWrongOption Constant
+highlight default link offlineimapUI          Constant
 highlight default link offlineimapString String
 
 

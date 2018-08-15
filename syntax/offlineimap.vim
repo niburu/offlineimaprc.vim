@@ -91,4 +91,4 @@ highlight default link offlineimapWrongOption Constant
 highlight default link offlineimapUI          Constant
 highlight default link offlineimapString String
 
-let b:currEnt_syntax = "offlineimap"
+let b:current_syntax = "offlineimap"

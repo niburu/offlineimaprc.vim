@@ -50,6 +50,11 @@ syntax match offlineimapOption /^\<\(ui\)\>/
 set iskeyword+=.
 syntax match offlineimapNumber /\<\d\+\.*\d*\>\|\<\.\d\+\>/
 
+" Match some python keyword
+syntax match offlineimapPython /\<lambda\>/
+syntax match offlineimapPython /\<not\>/
+syntax match offlineimapPython /\<in\>/
+
 syn match offlineimapBool     /\<\([Tt]rue\)\>/
 syn match offlineimapBool     /\<\([Ff]alse\)\>/
 syn match offlineimapActivate /\<\(yes\|no\)\>/
@@ -89,6 +94,7 @@ highlight default link offlineimapBool        Constant
 highlight default link offlineimapActivate    Constant
 highlight default link offlineimapWrongOption Constant
 highlight default link offlineimapUI          Constant
+highlight default link offlineimapPython      Constant
 highlight default link offlineimapString String
 
 let b:current_syntax = "offlineimap"

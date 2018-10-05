@@ -42,6 +42,7 @@ syntax match offlineimapOption /^\<\(remoteusereval\)\>/
 syntax match offlineimapOption /^\<\(socktimeout\)\>/
 syntax match offlineimapOption /^\<\(ssl\)\>/
 syntax match offlineimapOption /^\<\(sslcacertfile\)\>/
+syntax match offlineimapOption /^\<\(starttls\)\>/
 syntax match offlineimapOption /^\<\(status_backend\)\>/
 syntax match offlineimapOption /^\<\(type\)\>/
 syntax match offlineimapOption /^\<\(ui\)\>/
